@@ -53,14 +53,11 @@ def game ():
     global compScore
     print("Welcome to Rock, Paper, Scissors")
     print("To quit type exit.")
-    again = True
     wannaPlay = input("Do you want to play? [y/n] ").lower()
-    while again == True:
+    while True:
         if wannaPlay == 'n' or wannaPlay == 'no' or wannaPlay == 'exit' or wannaPlay == "quit":
-            again = False
             exit()
         else:
-            again = True
             play_round()
             print(f"Current Score: \n    Player 1: {playerScore} \n    Computer Score: {compScore}")
             wannaPlay = input("Play again? [y/n] ")
