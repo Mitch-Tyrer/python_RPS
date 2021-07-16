@@ -18,11 +18,11 @@ def computer_play ():
 def user_play ():
     while True:
         selection = input("Rock, Paper, Scissors! ").lower()
+        if selection == 'exit' or selection == 'quit':
+            exit()
         opt = [opt.lower() for opt in options]
         try:
             selection in opt
-            if selection == 'exit' or selection == 'quit':
-                exit()
             index = opt.index(selection)
             return index
         except:
